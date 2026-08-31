@@ -2,15 +2,15 @@
 
 ## Roadmap Objective
 
-State the exact checklist item this exercise validates.
+Write down the exact checklist item this exercise validates.
 
 ## Task
 
-Describe the exercise without including the solution.
+Describe what you need to do without including the solution.
 
 ## Acceptance Criteria
 
-- [ ] The learner can explain the result.
+- [ ] You can explain the result.
 - [ ] The implementation/calculation is correct.
 - [ ] The result is reproducible when applicable.
 
@@ -20,4 +20,4 @@ Reference any relevant `LEARN-ISSUE-NNNN` entries from `docs/progress/issues-and
 
 ## Reflection
 
-After completion, record what was learned, mistakes that were corrected, and how the final result was verified.
+After you finish, record what you learned, what you corrected, and how you verified the final result.

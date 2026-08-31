@@ -1,6 +1,6 @@
 # Repository Tree
 
-This file is a reference snapshot of the intended starter structure. Update it when the canonical repository layout changes.
+Use this as a quick reference for the intended starter structure. Update it whenever the repository layout changes.
 
 ```text
 ai-from-scratch-to-oci/

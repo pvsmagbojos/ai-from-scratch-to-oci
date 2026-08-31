@@ -1,31 +1,31 @@
 # Documentation Standard
 
-## 1. Canonical-Document Rule
+## 1. Single-Source Document Rule
 
-Each subject has one canonical document. Update that document instead of creating files such as `final`, `latest`, `v2`, `revised`, or parallel replacements.
+Each subject has one source-of-truth document. Update that document instead of creating files such as `final`, `latest`, `v2`, `revised`, or parallel replacements.
 
 The master roadmap remains a checklist. Do not turn it into lesson notes or a running journal.
 
 ## 2. Documentation Domains
 
-The repository has two documentation histories because `main` is the reusable course while `progress/<learner>` contains personal learning state.
+Keep two documentation histories: `main` holds shared course maintenance, while `progress/<learner>` holds your personal learning state.
 
-### Canonical course/repository history
+### Shared course/repository history
 
 Stored under `docs/history/` and maintained through `main`:
 
 - `repository-change-log.md` — append-only history of material changes to the reusable course/repository;
 - `repository-issues-and-resolutions.md` — append-only troubleshooting history for repository/course maintenance issues.
 
-### Learner history
+### Your learning history
 
 Stored under `docs/progress/` and changed on `progress/<learner>`:
 
-- `current-learning-status.md` — current learner position and exact next step;
+- `current-learning-status.md` — your current position and exact next step;
 - `learning-log.md` — append-only chronological record of material learning actions;
-- `issues-and-resolutions.md` — append-only troubleshooting record for learner errors, failed attempts, misconceptions, diagnoses, fixes, and verification.
+- `issues-and-resolutions.md` — your append-only troubleshooting record for errors, failed attempts, misconceptions, diagnoses, fixes, and verification.
 
-Do not record routine personal learning history in the repository-maintenance files. Do not record canonical course-maintenance work only in a learner's progress log.
+Do not record routine personal learning history in the repository-maintenance files. Do not record shared course-maintenance work only in your progress log.
 
 ## 3. Other Documentation Types
 
@@ -33,20 +33,20 @@ Do not record routine personal learning history in the repository-maintenance fi
 Tracks required learning scope and completion only.
 
 ### Topic `README.md`
-Tracks the topic's local checklist, prerequisites, status, exercises, completion evidence, and relevant learner issue references.
+Tracks your local checklist, prerequisites, status, exercises, completion evidence, and relevant issue references for the topic.
 
 ### `notes.md`
-Contains durable explanations and learner-facing notes worth reviewing later. Keep notes organized by concept rather than by chat transcript.
+Contains durable explanations and notes worth reviewing later. Keep notes organized by concept rather than by chat transcript.
 
 ### `references.md`
 Records sources actually used. Prefer primary/official documentation. For changing services, include the access date and relevant version/region when known.
 
 ### Project `README.md`
-Explains the problem, requirements, setup, execution, evaluation, known limitations, third-party dependencies/assets, and relevant learner issue references for a project.
+Explains the problem, requirements, setup, execution, evaluation, known limitations, third-party dependencies/assets, and relevant issue references for your project.
 
 ## 4. Material-Step Documentation Rule
 
-Every material learning or repository-changing action must be documented well enough that another person can understand how the relevant branch reached its current state.
+Document every material learning or repository-changing action well enough that you—or someone reviewing the branch later—can understand how it reached its current state.
 
 Material steps include:
 
@@ -68,11 +68,11 @@ For normal learning, group related actions into one dated `docs/progress/learnin
 
 ## 5. Issue and Resolution Documentation
 
-Errors and failed attempts are evidence. Do not remove their history simply because the final implementation works.
+Errors and failed attempts are part of the evidence. Keep the useful history even after the final implementation works.
 
-Use the issue log that matches the branch context:
+Use the issue log that matches what you are working on:
 
-- learner/coursework issue → `docs/progress/issues-and-resolutions.md`;
+- your coursework issue → `docs/progress/issues-and-resolutions.md`;
 - reusable repository/course-maintenance issue → `docs/history/repository-issues-and-resolutions.md`.
 
 Record an issue when it:
@@ -105,7 +105,7 @@ Do not claim a root cause was found when only a workaround is known. Label worka
 
 ## 6. Issue IDs and Cross-References
 
-Learner issues use:
+For your learning issues, use:
 
 ```text
 LEARN-ISSUE-0001
@@ -119,7 +119,7 @@ REPO-ISSUE-0001
 REPO-ISSUE-0002
 ```
 
-The relevant issue log is canonical. Topic/project files and chronological logs should reference the issue ID rather than copying the full troubleshooting history into multiple locations.
+Keep the full issue record in the matching issue log. In topic/project files and chronological logs, reference the issue ID instead of copying the same troubleshooting history everywhere.
 
 ## 7. Reference Rules
 
@@ -127,14 +127,14 @@ The relevant issue log is canonical. Topic/project files and chronological logs 
 - Use secondary tutorials only when they provide learning value not available from a primary source.
 - OCI implementation documentation must reference current Oracle documentation.
 - Record enough information to re-find a source: title, organization/author when useful, URL, and access date for mutable web documentation.
-- Distinguish source-derived facts from learner conclusions or experiment results.
+- Distinguish source-derived facts from your own conclusions or experiment results.
 - When a reference was specifically used to resolve an issue, include it in both the relevant topic/project `references.md` when appropriate and the corresponding issue record.
 
 ## 8. Third-Party Licensing and Provenance
 
 The root MIT License applies to original repository content. It does not automatically grant rights to redistribute third-party material.
 
-Before committing a third-party dataset, model, code sample, image, paper, document, or other asset:
+Before you commit a third-party dataset, model, code sample, image, paper, document, or other asset:
 
 1. identify its source and owner/author when known;
 2. identify its license or usage terms;
@@ -142,13 +142,13 @@ Before committing a third-party dataset, model, code sample, image, paper, docum
 4. record the source, license/terms, and any required attribution in the owning `README.md` or `references.md`;
 5. preserve required notices when the license requires them.
 
-If the license is unclear, unavailable, or does not permit redistribution, do not commit the material. Document how an authorized learner can obtain it instead.
+If the license is unclear, unavailable, or does not permit redistribution, do not commit the material. Document how you can obtain it through an authorized source instead.
 
 Do not copy a third party's license text into the root `LICENSE` as though it governed the entire repository. Project- or asset-specific license/notice files may be included beside the material when required.
 
 ## 9. Code Documentation
 
-Every code-related explanation or change must identify the exact repository path.
+Whenever you document or change code, identify the exact repository path.
 
 Do not document behavior the code does not implement. If code and documentation disagree, correct the inconsistency before marking the associated learning/project item complete.
 
@@ -156,7 +156,7 @@ When debugging code, preserve enough evidence to explain the observed behavior a
 
 ## 10. Experiment Documentation
 
-For experiments, record at minimum:
+For each experiment, record at least:
 
 - objective/hypothesis;
 - data source;
@@ -167,10 +167,10 @@ For experiments, record at minimum:
 - result;
 - interpretation;
 - limitations and next step;
-- material errors or failed runs, referenced by learner issue ID when applicable.
+- material errors or failed runs, referenced by your issue ID when applicable.
 
 ## 11. Reproducibility
 
-A learning artifact should contain enough setup information for the learner to reproduce it later from a fresh environment. Do not rely on unstated notebook state, machine-local paths, hidden credentials, or undocumented chat context.
+Write enough setup information in each learning artifact that you can reproduce it later from a fresh environment. Do not rely on unstated notebook state, machine-local paths, hidden credentials, or undocumented chat context.
 
 A documented resolution is not complete until its verification step is recorded. “The error disappeared” is insufficient when a stronger functional verification is available.

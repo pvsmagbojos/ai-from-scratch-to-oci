@@ -1,6 +1,6 @@
-# Learner Issues and Resolutions
+# Your Issues and Resolutions
 
-This is the learner-specific append-only troubleshooting record for errors, unexpected behavior, material failed attempts, misconceptions, and debugging discoveries encountered while progressing through the course on a `progress/<learner>` branch.
+Use this append-only log for errors, unexpected behavior, meaningful failed attempts, misconceptions, and debugging discoveries you encounter while working through the course on your `progress/<learner>` branch.
 
 Repository-maintenance issues that affect the reusable course itself belong in `docs/history/repository-issues-and-resolutions.md` on `main`.
 
@@ -12,7 +12,7 @@ Follow `docs/standards/documentation-standard.md` for the complete documentation
 - `Resolved` — a resolution was implemented and verified.
 - `Deferred` — intentionally postponed; record why and what would allow work to resume.
 
-## Learner Issue Entry Template
+## Issue Entry Template
 
 ### LEARN-ISSUE-0000 — Short descriptive title
 
@@ -55,6 +55,6 @@ Record sources used specifically for diagnosis/resolution when applicable.
 
 ---
 
-## Recorded Learner Issues
+## Recorded Issues
 
-None. Course learning has not started in the canonical baseline.
+None. Course learning has not started in this published starting state.

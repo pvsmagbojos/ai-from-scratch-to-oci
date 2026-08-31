@@ -1,8 +1,8 @@
 # Learning Log
 
-This is the learner-specific append-only chronological record of material learning actions performed on a `progress/<learner>` branch.
+Use this append-only log to keep a chronological record of the material learning actions you perform on your `progress/<learner>` branch.
 
-The canonical `main` branch intentionally contains no learner session history. Repository-maintenance history is recorded separately in `docs/history/repository-change-log.md`.
+The `main` branch intentionally contains no personal learning-session history. Repository-maintenance history is recorded separately in `docs/history/repository-change-log.md`.
 
 ## Entry Template
 
@@ -13,10 +13,10 @@ The canonical `main` branch intentionally contains no learner session history. R
 - Commands/files changed:
 - Exercise or knowledge-check evidence:
 - Verification/result:
-- Related learner issues:
+- Related issues:
 - Roadmap/progress changes:
 - Exact next step:
 
 ## Recorded Learning Sessions
 
-None. Course learning has not started in the canonical baseline.
+None. Course learning has not started in this published starting state.

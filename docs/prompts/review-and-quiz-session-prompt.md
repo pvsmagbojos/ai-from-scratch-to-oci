@@ -3,7 +3,7 @@
 ```text
 Use the AI Tutor master prompt and repository standards.
 
-Document material steps and verification in the learning log. Record any material errors/issues, investigation, resolution/workaround, and verification in `docs/progress/issues-and-resolutions.md` using the canonical issue format.
+Document material steps and verification in the learning log. Record any material errors/issues, investigation, resolution/workaround, and verification in `docs/progress/issues-and-resolutions.md` using the standard issue format.
 
 Review me only on the following completed roadmap scope:
 [PASTE PHASE / TOPICS]

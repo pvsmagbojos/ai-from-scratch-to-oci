@@ -14,15 +14,15 @@
 
 ## Prerequisites
 
-- [ ] Add only prerequisites actually required for this topic.
+- [ ] Add only the prerequisites you actually need for this topic.
 
 ## Local Checklist
 
-- [ ] Copy the relevant checklist items from the master roadmap for working convenience. Keep completion synchronized with the master roadmap.
+- [ ] Copy the relevant checklist items from the master roadmap for working convenience, and keep their completion state synchronized.
 
 ## Exercises / Evidence
 
-- [ ] Record the exercise, explanation, derivation, notebook, or implementation that proves each item is understood.
+- [ ] Record the exercise, explanation, derivation, notebook, or implementation that shows you understand each item.
 
 ## Issues / Troubleshooting
 
@@ -32,4 +32,4 @@ Reference relevant IDs from `docs/progress/issues-and-resolutions.md`. Do not du
 
 ## Completion Notes
 
-Do not mark this topic complete until the required roadmap items and any topic/phase exit criteria have evidence.
+Do not mark this topic complete until you have evidence for the required roadmap items and any topic/phase exit criteria.

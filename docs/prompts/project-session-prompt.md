@@ -14,5 +14,5 @@ Break the project into testable milestones tied to roadmap competencies. For eac
 
 Keep the project reproducible and document setup, dependencies, data provenance, experiment configuration, evaluation, known limitations, and references.
 
-When a milestone is completed, update the canonical project documentation and learning progress before moving to the next milestone.
+When a milestone is completed, update the source-of-truth project documentation and learning progress before moving to the next milestone.
 ```

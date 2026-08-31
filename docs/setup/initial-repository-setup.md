@@ -1,26 +1,26 @@
 # Initial Repository Setup
 
-This guide describes how the public starter is published and how a learner begins from it without mixing personal progress into the canonical course branch.
+Use this guide to publish the public starter and begin your own progress without mixing personal work into the shared `main` branch.
 
-Repository administration performed before instruction does not by itself satisfy a Git learning objective. Git checklist items are marked complete only after the learner can explain and demonstrate the relevant operation during the course.
+Some Git actions happen here before the course formally teaches Git. That is fine, but treat them as setup only. Check off a Git objective later, after you can explain and demonstrate the operation yourself.
 
-## 1. Canonical Public Repository
+## 1. Public Repository
 
-Repository name:
+Use this repository name:
 
 ```text
 ai-from-scratch-to-oci
 ```
 
-GitHub description:
+Use this GitHub description:
 
 ```text
 A hands-on AI learning journey from Python and data science fundamentals to machine learning, deep learning, LLMs, agentic AI, and production deployment on Oracle Cloud Infrastructure.
 ```
 
-The scaffold contents belong directly at the repository root. Do not create an extra nested `ai-learning/` directory inside the GitHub repository.
+Put the scaffold contents directly at the repository root. Do not add another `ai-learning/` folder around them.
 
-The root should contain files/folders such as:
+Your root should contain files and folders such as:
 
 ```text
 README.md
@@ -32,100 +32,100 @@ scripts/
 templates/
 ```
 
-## 2. Publishing the Initial `main` Baseline
+## 2. Publish the Initial `main` Baseline
 
-The first public `main` state is the reusable starting point for every learner. When creating the GitHub repository, do not ask GitHub to generate a second README, `.gitignore`, or license because the scaffold already contains them.
+Use the first public `main` state as the reusable starting point for the course. When you create the GitHub repository, do not ask GitHub to generate another README, `.gitignore`, or license—the scaffold already contains them.
 
-After the complete starter is published and verified, tag that exact commit:
+After you publish and verify the complete starter, tag that exact commit:
 
 ```text
 v0.1.0
 ```
 
-`v0.1.0` is the immutable original public starting baseline. Future fixes to the reusable course may continue on `main` and receive later version tags.
+Keep `v0.1.0` unchanged so it always points to the original public starting state. Future fixes to the shared course can continue on `main` and use later version tags.
 
-Record repository-maintenance changes under `docs/history/`. Do not place personal learner progress on `main`.
+Record shared repository/course maintenance under `docs/history/`. Keep personal progress off `main`.
 
-## 3. Starting Personal Progress
+## 3. Start Your Progress Branch
 
-Before recording learning work, create or use a long-lived learner branch:
+Before you record learning work, create or switch to a long-lived progress branch:
 
 ```text
 progress/<learner>
 ```
 
-Example:
+For example:
 
 ```text
-progress/paul
+progress/vincent
 ```
 
-A learner may create this branch mechanically as part of initial repository administration. Doing so does not mean the roadmap's Git branch objective is complete; that objective requires later understanding and demonstrated use.
+Creating this branch during setup does not mean you have completed the roadmap's Git branching objective. You will demonstrate that skill later when the course reaches it.
 
-Update `docs/progress/current-learning-status.md` on the progress branch by replacing the placeholder branch name.
+On your progress branch, update `docs/progress/current-learning-status.md` so it shows the branch you actually use.
 
-## 4. Course Updates After Learning Has Begun
+## 4. Bring In Shared Course Updates Later
 
-If the canonical course needs a correction or improvement, create a temporary branch from `main`:
+If the shared course needs a correction or improvement, create a temporary branch from `main`:
 
 ```text
 course/<short-description>
 ```
 
-After review, merge that change into `main`, update `docs/history/`, and publish the new canonical state. Learners then merge `main` into their own `progress/<learner>` branch.
+After you review the change, merge it into `main`, update `docs/history/`, and publish the updated shared course state. Then merge the updated `main` into your progress branch.
 
-Do not merge a learner's personal progress branch into `main`.
+Never merge your personal progress branch into `main`.
 
-## 5. Learner Documentation Trail
+## 5. Keep a Learning Trail
 
-Once learning begins, read:
+Once learning begins, keep these documents handy:
 
 - `docs/standards/documentation-standard.md`
 - `docs/progress/learning-log.md`
 - `docs/progress/issues-and-resolutions.md`
 
-For each learning session, record the material commands/actions, why they were performed, important observations, evidence, and verification results. Do not paste secrets or sensitive values into repository documentation.
+For each session, record the material actions you took, why you took them, important observations, evidence, and verification results. Do not put secrets or sensitive values into repository documentation.
 
-If an error or material issue occurs, create/update a learner issue entry before moving on; after resolving it, record how the fix was verified.
+If you hit an error or material issue, add or update an issue entry as part of the learning process. After you fix it, record how you verified the fix instead of documenting only the successful end state.
 
-## 6. Python Environment
+## 6. Create the Python Environment During Phase 0
 
-Do not create the course `.venv` merely as bootstrap automation. Create it when Phase 0 reaches the corresponding Python environment objective, after the Python interpreter/version has been verified and the learner understands what the environment is for.
+Do not create the course `.venv` just to finish repository setup. Create it when Phase 0 reaches the Python environment objective, after you have verified your Python interpreter/version and understand what the environment is for.
 
-The repository-local environment will use `.venv/` by default and must remain ignored by Git.
+Use `.venv/` as the default repository-local environment, and keep it ignored by Git.
 
-## 7. Git Learning Versus Repository Administration
+## 7. Separate Git Learning From Repository Setup
 
-Because the course itself is distributed through GitHub, some learners will clone/fork the repository and create a progress branch before the Git lessons explain those operations. Treat those early actions as setup only.
+Because the course itself is distributed through GitHub, you may clone/fork the repository and create a progress branch before the Git lessons explain those commands. Treat those early actions as setup.
 
-When the roadmap later teaches:
+When the roadmap later teaches Git:
 
-- `git init` — practice it in an appropriate temporary/practice repository rather than running it blindly inside an already cloned repository;
+- `git init` — practice it in a suitable temporary/practice repository instead of running it blindly inside an existing clone;
 - `git clone` — explain and demonstrate what cloning created locally;
-- `git status`, `git add`, `git commit`, `git pull`, `git push`, branches, and merging — require actual learner evidence before checking them off.
+- `git status`, `git add`, `git commit`, `git pull`, `git push`, branches, and merging — provide your own evidence before checking them off.
 
-## 8. Public Repository Safety
+## 8. Keep the Public Repository Safe
 
-Before publishing or committing changes:
+Before you publish or commit changes:
 
-- inspect staged files;
+- inspect the files you staged;
 - never commit `.env`, private keys, credentials, access tokens, or OCI secrets;
-- keep `.venv/`, caches, generated model binaries, and large raw/processed datasets out of Git unless a documented exception applies;
-- verify third-party redistribution rights before committing external datasets, models, code, images, papers, or other assets.
+- keep `.venv/`, caches, generated model binaries, and large raw/processed datasets out of Git unless you have a documented reason to include them;
+- check redistribution rights before you commit third-party datasets, models, code, images, papers, or other assets.
 
-If a secret is ever committed, treat it as compromised and rotate/revoke it rather than relying on deletion from the latest commit.
+If you ever commit a secret, treat it as compromised. Rotate or revoke it; deleting it from the latest commit is not enough.
 
-## 9. Beginning Phase 0
+## 9. Begin Phase 0
 
-Once the public baseline and learner progress branch exist, course learning begins at the first active item in `docs/progress/current-learning-status.md`.
+Once the public baseline and your progress branch exist, start with the first active item in `docs/progress/current-learning-status.md`.
 
-Before ending each session:
+Before you end each session:
 
-1. verify the work performed;
+1. verify the work you performed;
 2. update `docs/progress/learning-log.md`;
-3. finish or explicitly defer learner issue entries;
+3. finish or explicitly defer any issue entries;
 4. update `docs/progress/current-learning-status.md`;
-5. update the master roadmap only for objectives with actual completion evidence;
+5. update the master roadmap only for objectives you actually completed;
 6. identify the exact next roadmap item.
 
 ## References

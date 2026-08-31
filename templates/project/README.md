@@ -2,15 +2,15 @@
 
 ## Roadmap Scope
 
-State the phase/project and competencies this project validates.
+Write down the phase/project and competencies this project validates.
 
 ## Problem
 
-Define the problem before choosing libraries, models, or OCI services.
+Define the problem before you choose libraries, models, or OCI services.
 
 ## Success Criteria
 
-Define measurable success criteria.
+Define measurable success criteria you can actually verify.
 
 ## Structure
 
@@ -25,11 +25,11 @@ Define measurable success criteria.
 
 ## Setup
 
-Document environment and dependencies.
+Document the environment and dependencies you need to reproduce the project.
 
 ## Data Provenance
 
-Document where data came from and any usage/licensing constraints.
+Document where your data came from and any usage/licensing constraints.
 
 ## Evaluation
 
@@ -37,15 +37,15 @@ Document metrics, baselines, experiment conditions, and results.
 
 ## Known Limitations
 
-Record limitations explicitly.
+Record the limitations you know about explicitly.
 
 ## Issues / Troubleshooting
 
-Reference relevant `LEARN-ISSUE-NNNN` records from `docs/progress/issues-and-resolutions.md`. Keep the full diagnosis/resolution history in the canonical learner issue log unless a project-specific technical document genuinely needs additional detail.
+Reference relevant `LEARN-ISSUE-NNNN` records from `docs/progress/issues-and-resolutions.md`. Keep the full diagnosis/resolution history in your issue log unless a project-specific technical document genuinely needs additional detail.
 
 ## Verification / Reproducibility
 
-Record the final checks used to confirm the project behaves as documented.
+Record the final checks you used to confirm the project behaves as documented.
 
 ## References
 

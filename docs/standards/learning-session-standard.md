@@ -2,145 +2,155 @@
 
 ## 1. Purpose
 
-This standard defines how each roadmap item is taught, practiced, assessed, documented, and marked complete. It applies to all future AI-learning conversations unless a roadmap item explicitly requires a different workflow.
+Use this standard to keep each roadmap item consistent: learn it, practice it, prove you understand it, document what happened, and only then mark it complete. Follow this workflow in future AI-learning conversations unless a roadmap item genuinely needs something different.
 
-## 2. Branch Context
+## 2. Repository and Branch Context
 
-Learning sessions operate on a learner's `progress/<learner>` branch. Do not commit personal progress directly to `main`. If the session discovers a defect in the reusable course itself, document the learner impact on the progress branch and route the canonical correction through a `course/<short-description>` branch from `main` as defined in `repository-structure-standard.md`.
+At the start of each learning session, give your tutor the exact repository and learning branch you are using. That can be the original repository, your fork, or another repository intentionally created from this course.
+
+`progress/<learner>` is the recommended branch pattern, but you can intentionally use another name. Keep your personal progress off upstream `main`.
+
+If you use a fork, treat your fork + your learning branch as the source of truth for your progress. Use the upstream repository only when you need to compare, maintain, or synchronize shared course material.
+
+If you discover a defect in the reusable course itself, record how it affected your learning branch. Make the shared correction through a `course/<short-description>` branch created from upstream `main`, as described in `repository-structure-standard.md`.
 
 ## 3. Source of Truth
 
-Use these documents in this order:
+When your repository and branch are accessible, have the tutor read them directly instead of asking you to upload the same documentation again. Start with `README.md` on your branch. If direct access is unavailable, use a connected repository integration or upload only the specific files needed. Do not silently use stale files from an older conversation.
 
-1. `docs/roadmap/ai-learning-roadmap-master-checklist.md` for course scope and completion state.
-2. `docs/progress/current-learning-status.md` for the active item and immediate next step.
-3. The current topic/project files for implementation state and learner evidence.
-4. `docs/progress/issues-and-resolutions.md` for relevant unresolved or previously solved problems.
-5. `docs/standards/` for repository and documentation rules.
-6. Current authoritative external documentation for technologies whose behavior or product surface can change.
+Use these sources in this order:
 
-Do not silently rewrite the roadmap. If a prerequisite or missing topic is discovered, document the gap and propose the smallest roadmap change required.
+1. your specified repository + learning branch for personal progress;
+2. `README.md` on that branch for setup/session instructions;
+3. `docs/roadmap/ai-learning-roadmap-master-checklist.md` for course scope and completion state;
+4. `docs/progress/current-learning-status.md` for your active item and immediate next step;
+5. your current topic/project files for implementation state and evidence;
+6. `docs/progress/issues-and-resolutions.md` for relevant unresolved or previously solved problems;
+7. `docs/standards/` for repository and documentation rules;
+8. upstream `main` only when you are comparing or synchronizing shared course changes;
+9. current authoritative external documentation for technologies that can change over time.
+
+Do not silently rewrite the roadmap. If you discover a missing prerequisite or topic, document the gap and make the smallest roadmap change that solves it.
 
 ## 4. Standard Lesson Sequence
 
 For each checklist item:
 
-1. **Orient** — state what is being learned and why it matters to later AI work.
-2. **Prerequisite check** — briefly confirm only the prerequisite knowledge required for the item.
-3. **Teach the concept** — start with intuition, then add formal definitions, mathematics, or implementation details as appropriate.
-4. **Worked example** — show one grounded example when an example materially helps.
-5. **Guided exercise** — give a small exercise that can be completed with the newly taught concept.
-6. **Independent exercise** — require the learner to apply the concept with less scaffolding when the item is practical.
-7. **Review** — ask for an explanation, prediction, debugging step, derivation, or other evidence of understanding.
-8. **Document** — record the material steps performed, update notes/references and code/notebook artifacts, and record any issues/resolutions.
-9. **Verify** — verify that the exercise, environment change, fix, or implementation behaves as intended.
-10. **Complete** — mark the checklist item complete only after the required evidence and verification exist.
+1. **Orient** — understand what you are learning and why it matters later.
+2. **Check prerequisites** — confirm only the knowledge you actually need for this item.
+3. **Learn the concept** — start with intuition, then add definitions, mathematics, or implementation details when useful.
+4. **Work through an example** — use one grounded example when it helps the concept click.
+5. **Try a guided exercise** — apply the concept with some scaffolding.
+6. **Try an independent exercise** — apply it again with less help when the item is practical.
+7. **Review** — explain, predict, debug, derive, or otherwise show that you understand the item.
+8. **Document** — record the material steps, notes, references, code/notebook artifacts, and issues/resolutions.
+9. **Verify** — check that the exercise, environment change, fix, or implementation really works.
+10. **Complete** — mark the checklist item complete only after the evidence and verification are there.
 
-A purely conceptual item may use a knowledge check instead of code. A practical item must include hands-on work.
+For a conceptual item, a knowledge check may be enough. For a practical item, do hands-on work.
 
 ## 5. Completion Rules
 
-Do not mark a roadmap item complete merely because it has been explained.
+An explanation by itself does not complete a roadmap item.
 
-Completion requires evidence appropriate to the item, such as:
+Use evidence that fits the item, such as:
 
-- a correct explanation in the learner's own words;
+- a correct explanation in your own words;
 - a completed exercise;
-- a working script/notebook;
+- a working script or notebook;
 - a correct manual derivation;
 - a successful debugging task;
 - a project artifact;
 - an exit-criteria demonstration.
 
-Phase completion additionally requires its explicit project/exit criteria where the roadmap defines them.
+To complete a phase, also finish its project or exit criteria when the roadmap defines them.
 
 ## 6. Exercise Rules
 
-Every roadmap item receives at least one exercise or knowledge check.
+Every roadmap item gets at least one exercise or knowledge check.
 
-Prefer exercises that require active recall, prediction, implementation, debugging, comparison, or explanation rather than passive reading.
+Prefer active work—recall, prediction, implementation, debugging, comparison, or explanation—over passive reading.
 
 When code is relevant:
 
-- identify the exact repository path/filename;
+- identify the exact repository path and filename;
 - do not invent missing project types, APIs, files, schemas, or architecture;
-- request all materially missing implementation context at once before producing grounded code;
-- let the learner attempt the exercise before presenting a full solution unless a worked solution was requested;
-- explain corrections rather than only replacing code.
+- collect materially missing implementation context before producing grounded code;
+- attempt the exercise before asking for a full solution unless you intentionally want a worked solution;
+- understand the correction instead of only replacing your code.
 
-## 7. From-Scratch Before Abstraction
+## 7. Build From Scratch Before Hiding the Details
 
-Where the roadmap explicitly requires a from-scratch implementation, do not replace it with a framework call. Libraries may be used afterward for comparison and validation.
+When the roadmap asks for a from-scratch implementation, do not replace it with a framework call. You can use a library afterward to compare and validate your result.
 
 Examples include manual gradient descent, NumPy neural networks, attention primitives, retrieval similarity, and agent loops.
 
-## 8. Notebook and Script Choice
+## 8. Choose Notebooks or Scripts Deliberately
 
-Use notebooks when interactivity, visualization, data exploration, or stepwise mathematical reasoning is part of the lesson.
+Use notebooks when interactivity, visualization, data exploration, or step-by-step mathematical reasoning helps the lesson.
 
-Use Python scripts/modules when teaching software structure, reusable functions/classes, testing, APIs, agents, production services, or code that should run non-interactively.
+Use Python scripts/modules when you are learning software structure, reusable functions/classes, testing, APIs, agents, production services, or code that should run non-interactively.
 
-A completed notebook must restart and run top-to-bottom without hidden state.
+Before you consider a notebook complete, restart its kernel and run it top-to-bottom without relying on hidden state.
 
-## 9. Mathematics Teaching Rule
+## 9. Learn the Mathematics, Not Just the API
 
 For mathematical material:
 
-1. explain the intuition;
+1. understand the intuition;
 2. define the notation;
-3. work a small numeric example manually;
+3. work through a small numeric example manually;
 4. connect the math to AI/ML;
-5. implement or verify it in Python/NumPy when the roadmap calls for implementation.
+5. implement or verify it in Python/NumPy when the roadmap calls for it.
 
-Do not skip mathematical meaning by jumping directly to library APIs.
+Do not skip the mathematical meaning by jumping straight to a library API.
 
-## 10. OCI and Other Mutable Technologies
+## 10. Verify OCI and Other Changing Technologies
 
-For OCI implementation work, Oracle's current official documentation is authoritative. Verify service names, model availability, APIs, SDK behavior, regional availability, IAM requirements, limits, and agent tooling before implementation.
+For OCI implementation work, use Oracle's current official documentation. Verify service names, model availability, APIs, SDK behavior, regional availability, IAM requirements, limits, and agent tooling before you implement anything.
 
-Clearly distinguish stable conceptual teaching from current product-specific behavior.
+Keep stable concepts separate from product details that may change.
 
-If a service is renamed, deprecated, or materially changed, update the existing roadmap/documentation rather than creating a competing document.
+If a service is renamed, deprecated, or materially changed, update the existing roadmap/documentation instead of creating a competing document.
 
+## 11. Document the Process and the Problems
 
-## 11. Process and Troubleshooting Documentation
+Document throughout the session, not only after something works.
 
-Documentation happens throughout the session, not only after success.
+For every material step, keep enough information to reconstruct what happened: the action or command, why you did it, the important result, and how you verified it when verification makes sense. Group these steps into the dated entry in `docs/progress/learning-log.md`.
 
-For every material step, preserve the information needed to reconstruct what happened: the action/command, purpose, important result, and verification when applicable. Group these steps into the dated entry in `docs/progress/learning-log.md`.
+When you hit an error or material issue:
 
-When an error or material issue occurs:
+1. record the symptom or useful exact error text;
+2. record the context and reproduction steps;
+3. investigate without pretending an unverified guess is the root cause;
+4. keep meaningful failed attempts when they teach something or narrow the diagnosis;
+5. record the root cause once the evidence supports it;
+6. record the final fix or workaround;
+7. verify the result with a relevant functional check;
+8. write down the reusable lesson or prevention step;
+9. add or update the issue in `docs/progress/issues-and-resolutions.md`;
+10. reference the issue ID from your learning log and relevant topic/project documentation.
 
-1. record the observable symptom or exact error text when useful;
-2. record the context and reproducible steps;
-3. investigate without pretending an unverified hypothesis is the root cause;
-4. record meaningful failed attempts when they teach something or narrow the diagnosis;
-5. identify the root cause when evidence supports it;
-6. record the resolution or workaround;
-7. verify the fix with a relevant functional check;
-8. record the reusable lesson/prevention step;
-9. add or update the corresponding entry in `docs/progress/issues-and-resolutions.md`;
-10. reference the issue ID from the session's `learning-log.md` entry and relevant topic/project documentation.
+Never put secrets in logs. Redact credentials, tokens, private keys, and sensitive values before you commit documentation.
 
-Never expose secrets in logs. Redact credentials, tokens, private keys, and sensitive values from commands or error output before committing documentation.
+If you only found a workaround, call it a workaround. Do not label it a root-cause fix just because you can continue.
 
-A workaround does not become a confirmed root-cause fix merely because work can continue. Preserve that distinction.
-
-## 12. Session Closeout
+## 12. Close the Session Cleanly
 
 At the end of a learning session:
 
 - update `docs/progress/current-learning-status.md`;
-- append a chronological entry to `docs/progress/learning-log.md` covering the material steps and verification performed;
-- update `docs/progress/issues-and-resolutions.md` for every material error or issue encountered, including its resolution/verification when resolved;
-- update the master roadmap only for items actually completed or deliberately changed;
-- update topic notes/references when durable learning was added;
-- update existing documentation instead of creating duplicate replacement documents;
-- record unresolved questions/blockers;
-- identify the next exact roadmap item.
+- append the material steps and verification to `docs/progress/learning-log.md`;
+- update `docs/progress/issues-and-resolutions.md` for every material issue you encountered;
+- update the master roadmap only for items you actually completed or intentionally changed;
+- update topic notes/references when you added durable learning;
+- update existing documentation instead of creating duplicate replacement files;
+- record unresolved questions or blockers;
+- identify the exact next roadmap item.
 
-If a changed decision affects repository standards or the course, update the relevant standard document in the same session.
+If you make a decision that changes repository standards or the course itself, update the relevant standard in the same session.
 
-## 13. Output Rule for AI-Assisted Sessions
+## 13. AI-Assisted Output Rule
 
-When the tutor produces a complete repository file longer than 20 lines, provide it as an attachment/downloadable file rather than flooding the conversation with a full preview. Short patches or snippets may be shown inline when useful.
+When your tutor produces a complete repository file longer than 20 lines, have it provided as an attachment/downloadable file instead of filling the conversation with a full preview. Short patches or snippets can still be shown inline when they are useful.

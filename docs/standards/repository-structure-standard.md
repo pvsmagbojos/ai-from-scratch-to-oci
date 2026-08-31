@@ -2,7 +2,7 @@
 
 ## 1. Purpose
 
-This document defines the canonical file, folder, and Git-branch structure for `ai-from-scratch-to-oci`. The structure is designed for traceability, reproducibility, progressive learning, Git usability, public reuse, and eventual migration of selected work into production-style Python and OCI projects.
+Use this structure throughout `ai-from-scratch-to-oci`. It keeps your work traceable and reproducible while leaving room to grow from learning exercises into production-style Python and OCI projects.
 
 ## 2. Top-Level Structure
 
@@ -28,23 +28,23 @@ ai-from-scratch-to-oci/
 ```
 
 ### `course/`
-Contains learning artifacts mapped to roadmap phases. Every phase has a stable folder. Topic folders are created only when work on that topic begins.
+Keep learning artifacts here, grouped by roadmap phase. Every phase has a stable folder; create a topic folder only when you actually begin that topic.
 
 ### `docs/`
-Contains canonical course documentation, standards, prompt templates, roadmap state, repository history, and learner progress records. Do not duplicate these documents under individual phases.
+Keep course documentation, standards, prompt templates, roadmap state, shared repository history, and your progress records here. Do not duplicate these documents inside individual phases.
 
-`docs/history/` belongs to the canonical course and is maintained through `main`:
+`docs/history/` belongs to the shared course repository and is maintained through `main`:
 
 - `repository-change-log.md` — append-only course/repository maintenance history;
 - `repository-issues-and-resolutions.md` — append-only course/repository troubleshooting history.
 
-`docs/progress/` belongs to the learner's progress branch:
+Keep `docs/progress/` on your progress branch:
 
-- `current-learning-status.md` — current learner position and next step;
+- `current-learning-status.md` — your current position and next step;
 - `learning-log.md` — append-only chronological record of material learning actions;
-- `issues-and-resolutions.md` — append-only learner troubleshooting history.
+- `issues-and-resolutions.md` — your append-only troubleshooting history.
 
-Separating `history/` from `progress/` prevents routine `main` updates from competing with a learner's append-only personal records.
+Keeping `history/` separate from `progress/` prevents routine `main` updates from colliding with your append-only personal records.
 
 ### `shared/`
 Contains only assets that are genuinely reused across multiple phases or projects. Topic-specific code, data, and notebooks stay with the topic or project that owns them.
@@ -126,7 +126,7 @@ exercises/
 
 For notebook exercises, use `solution.ipynb` instead of `solution.py` when interactivity is part of the learning objective.
 
-Do not generate a completed solution before the learner has attempted the exercise unless the learner explicitly asks for a worked solution.
+Do not generate a completed solution before you have attempted the exercise unless you explicitly ask for a worked solution.
 
 ## 6. Project Structure
 
@@ -209,7 +209,7 @@ Avoid spaces, platform-specific characters, and decorative Unicode punctuation i
 
 ## 11. Git and Branch Standards
 
-### 11.1 Canonical `main`
+### 11.1 Shared `main` Branch
 
 `main` represents the latest reusable version of the course, not any individual's learning progress.
 
@@ -222,7 +222,7 @@ Allowed on `main`:
 - corrections to shared course material;
 - repository history and repository issue documentation.
 
-Do not put learner-specific exercise answers, notebooks, project implementations, completed learner checklist state, learner logs, or learner troubleshooting history on `main`.
+Do not put personal exercise answers, notebooks, project implementations, completed checklist state, learning logs, or personal troubleshooting history on `main`.
 
 ### 11.2 Initial Baseline Tag
 
@@ -232,11 +232,11 @@ Tag the first published public baseline as:
 v0.1.0
 ```
 
-That tag is immutable and represents the exact starting point used before personal learning begins. Future canonical course releases may use later semantic-version tags.
+That tag is immutable and represents the exact starting point used before personal learning begins. Future shared course releases may use later semantic-version tags.
 
-### 11.3 Learner Progress Branches
+### 11.3 Your Progress Branch
 
-Each learner uses a long-lived branch:
+Use a long-lived branch for your own progress:
 
 ```text
 progress/<learner>
@@ -249,32 +249,32 @@ progress/paul
 progress/alice
 ```
 
-All personal learning evidence is committed there. Personal progress is never merged back into `main`.
+Commit your personal learning evidence there. Never merge that personal progress back into `main`.
 
-When `main` receives a canonical course update, merge `main` into the progress branch so the learner receives the update without rewriting personal learning history.
+When `main` receives a shared course update, merge `main` into your progress branch so you get the update without rewriting your learning history.
 
 ### 11.4 Course Maintenance Branches
 
-Canonical course changes should normally be made on a temporary branch created from `main`:
+Shared course changes should normally be made on a temporary branch created from `main`:
 
 ```text
 course/<short-description>
 ```
 
-After review, merge the change into `main`, update the repository history, and then synchronize relevant learner branches from `main`.
+After review, merge the change into `main`, update the repository history, and then bring the updated `main` into any progress branches that need the change.
 
-If a learner discovers a shared-course defect while working on `progress/<learner>`, record the learner impact there, but implement the reusable correction from `main` through a `course/<short-description>` branch rather than merging personal progress into `main`.
+If you discover a shared-course defect while working on `progress/<learner>`, record how it affected your work there. Make the reusable correction from `main` through a `course/<short-description>` branch instead of merging personal progress into `main`.
 
-### 11.5 Temporary Learner Branches
+### 11.5 Temporary Work Branches
 
-For isolated implementation or experimentation, a learner may branch from `progress/<learner>` using:
+For isolated implementation or experimentation, you can branch from `progress/<learner>` using:
 
 ```text
 feature/<short-description>
 experiment/<short-description>
 ```
 
-Merge successful work back into the learner's progress branch, not into `main`.
+Merge successful work back into your progress branch, not into `main`.
 
 ### 11.6 Commit Standards
 
@@ -285,7 +285,7 @@ Commit logical units rather than every keystroke. A useful commit should represe
 - a corrected/refactored implementation;
 - a documentation update;
 - a phase/project milestone;
-- a canonical course-maintenance change.
+- a shared course-maintenance change.
 
 Suggested commit style:
 
@@ -303,12 +303,12 @@ Repository publication, cloning, or branch creation performed mechanically befor
 
 ## 12. Process and Issue Traceability
 
-Every material action must be recorded in the correct history domain:
+Record each material action in the history that matches the work:
 
-- canonical course/repository maintenance on `main` → `docs/history/repository-change-log.md`;
-- canonical repository maintenance issues on `main` → `docs/history/repository-issues-and-resolutions.md`;
-- learner activity on `progress/<learner>` → `docs/progress/learning-log.md`;
-- learner issues on `progress/<learner>` → `docs/progress/issues-and-resolutions.md`.
+- shared course/repository maintenance on `main` → `docs/history/repository-change-log.md`;
+- shared repository maintenance issues on `main` → `docs/history/repository-issues-and-resolutions.md`;
+- your learning activity on `progress/<learner>` → `docs/progress/learning-log.md`;
+- your learning issues on `progress/<learner>` → `docs/progress/issues-and-resolutions.md`.
 
 Topic/project documents reference issue IDs rather than duplicating full troubleshooting histories. Resolved issues remain in the appropriate log as evidence.
 

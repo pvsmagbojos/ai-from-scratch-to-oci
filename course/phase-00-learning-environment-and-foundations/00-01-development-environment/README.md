@@ -27,7 +27,7 @@
 - [ ] Learn how environment variables work.
 - [ ] Learn why API keys and credentials must not be committed to Git.
 
-The master roadmap remains authoritative. This local checklist is a working view for the active topic.
+Use the master roadmap as the source of truth. This local checklist is just your working view for the active topic.
 
 ## Current Evidence
 
@@ -35,8 +35,8 @@ The master roadmap remains authoritative. This local checklist is a working view
 - Documentation and learning-session standards created.
 - Reusable AI tutor/session prompts created.
 - All roadmap phase folders created.
-- Git initialization and virtual environment creation intentionally remain hands-on learner exercises.
+- Git initialization and virtual environment creation intentionally remain hands-on exercises for you to complete during the course.
 
 ## Next Exercise
 
-Follow `docs/setup/initial-repository-setup.md` with the tutor. Start by verifying/installing Python and explaining the interpreter/version before creating `.venv`.
+Follow `docs/setup/initial-repository-setup.md` with your tutor. Start by verifying or installing Python, then explain the interpreter and version before you create `.venv`.
