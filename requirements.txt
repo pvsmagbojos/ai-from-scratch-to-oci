@@ -1,0 +1,3 @@
+# Shared course tooling only.
+# Intentionally starts empty so pip/venv/dependency management can be learned explicitly in Phase 0.
+# Project-specific dependencies belong to the project that owns them.
