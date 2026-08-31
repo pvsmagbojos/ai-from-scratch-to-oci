@@ -211,3 +211,42 @@ When packaging repository patches, preserve full repository-relative paths. Base
 #### References
 
 None required.
+
+### REPO-ISSUE-0005 — Release version changed without updating current-version documentation
+
+- Date: 2026-08-31
+- Status: Resolved
+- Repository area: Release/version documentation
+- Affected files: `README.md`, `docs/progress/current-learning-status.md`, `docs/setup/initial-repository-setup.md`, `docs/standards/repository-structure-standard.md`, `docs/history/repository-change-log.md`
+
+#### Symptom / Error
+
+After `v0.2.0` was selected as the next shared course release, several documents still described `v0.1.0` as the intended or current starting version.
+
+#### Context / Reproduction
+
+The instructional-style documentation bundle was generated before the `v0.2.0` release recommendation was made. The Git instructions were updated in conversation, but the repository files were not revised in the same step.
+
+#### Investigation / Attempts
+
+Searched the complete repository for `v0.1.0` and `v0.2.0`, then reviewed each match to distinguish historical references from references that meant the current/recommended release.
+
+#### Root Cause
+
+The release-version decision happened after the documentation bundle had already been produced, and the follow-up release instructions did not include a documentation synchronization step.
+
+#### Resolution
+
+Kept `v0.1.0` wherever it refers to the historical first public baseline, added `v0.2.0` as the current shared course release, and updated setup/status/branching guidance so new progress branches start from the current release.
+
+#### Verification
+
+Re-scanned all release-version references and confirmed that `v0.1.0` is now used only for the original historical baseline while `v0.2.0` is identified as the current recommended release where appropriate.
+
+#### Maintenance Takeaway
+
+Whenever a new release tag is introduced, update the release references in documentation and the repository change history in the same change before publishing the tag.
+
+#### References
+
+None required.

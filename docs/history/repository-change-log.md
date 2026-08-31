@@ -52,3 +52,12 @@ It records course scaffolding, standards, prompt changes, repository-governance 
 - Left AI-instruction prompt style structurally unchanged except for removing previously rejected terminology.
 - Resolved `REPO-ISSUE-0003` after discovering that the earlier terminology validation covered only a partial update tree; rebuilt the full repository and validated the complete Markdown tree.
 - Resolved `REPO-ISSUE-0004` while packaging the update by replacing basename-only diff extraction with repository-relative path comparison.
+
+## 2026-08-31 — v0.2.0 Shared Course Release
+
+- Published the instructional and repository-workflow improvements as shared course release `v0.2.0`.
+- Kept `v0.1.0` unchanged as the historical first public baseline.
+- Updated learner-facing documentation so `v0.2.0` is identified as the current recommended starting release for new progress branches.
+- Clarified that existing release tags are immutable snapshots and should not be moved when later releases are created.
+- Corrected stale documentation that still described `v0.1.0` as the intended/current starting version after `v0.2.0` was introduced.
+- Recorded and resolved `REPO-ISSUE-0005` for the missed release-version documentation synchronization.

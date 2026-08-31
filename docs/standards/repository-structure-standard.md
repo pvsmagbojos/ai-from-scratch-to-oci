@@ -224,15 +224,21 @@ Allowed on `main`:
 
 Do not put personal exercise answers, notebooks, project implementations, completed checklist state, learning logs, or personal troubleshooting history on `main`.
 
-### 11.2 Initial Baseline Tag
+### 11.2 Course Release Tags
 
-Tag the first published public baseline as:
+The first published public baseline is permanently tagged as:
 
 ```text
 v0.1.0
 ```
 
-That tag is immutable and represents the exact starting point used before personal learning begins. Future shared course releases may use later semantic-version tags.
+The current shared course release is:
+
+```text
+v0.2.0
+```
+
+Do not move or recreate existing release tags. Each release tag should remain an immutable snapshot of the shared course at that version. Start new progress branches from the latest release unless you intentionally want to reproduce an older course state.
 
 ### 11.3 Your Progress Branch
 

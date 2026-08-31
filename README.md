@@ -9,7 +9,8 @@ Use this repository as both your course starting point and your working learning
 The repository is set up so you can start from the same shared course material as everyone else without mixing your personal work into `main`.
 
 - `main` — the reusable course starting point and shared course-maintenance history. Keep personal learning work off this branch.
-- `v0.1.0` — the immutable tag for the initial published starting point.
+- `v0.1.0` — the immutable tag for the original published starting point.
+- `v0.2.0` — the current shared course release and recommended starting point for new progress branches.
 - `progress/<learner>` — your long-lived learning branch. Keep your roadmap state, exercises, notebooks, projects, learning log, and issue history here.
 - `course/<short-description>` — a temporary branch from `main` for fixes or improvements that should become part of the shared course.
 - `feature/<short-description>` / `experiment/<short-description>` — optional temporary branches from your progress branch when you want isolated implementation or experimentation work.

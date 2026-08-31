@@ -32,17 +32,25 @@ scripts/
 templates/
 ```
 
-## 2. Publish the Initial `main` Baseline
+## 2. Choose the Course Version You Start From
 
-Use the first public `main` state as the reusable starting point for the course. When you create the GitHub repository, do not ask GitHub to generate another README, `.gitignore`, or license—the scaffold already contains them.
+Use the latest shared course release unless you intentionally need an older historical snapshot.
 
-After you publish and verify the complete starter, tag that exact commit:
+Current recommended release:
+
+```text
+v0.2.0
+```
+
+Historical first public baseline:
 
 ```text
 v0.1.0
 ```
 
-Keep `v0.1.0` unchanged so it always points to the original public starting state. Future fixes to the shared course can continue on `main` and use later version tags.
+Keep `v0.1.0` unchanged. It represents the original public starting state. New shared course fixes and improvements continue on `main` and receive later version tags such as `v0.2.0`.
+
+If you are publishing a new repository from the starter files instead of forking/cloning the original repository, do not ask GitHub to generate another README, `.gitignore`, or license—the repository already contains them.
 
 Record shared repository/course maintenance under `docs/history/`. Keep personal progress off `main`.
 

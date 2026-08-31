@@ -3,7 +3,7 @@
 ## Your Context
 
 - Progress branch: `progress/<learner>` (replace `<learner>` when beginning personal progress)
-- Intended base course version: `v0.1.0` after the public repository is created and the baseline is verified
+- Base course version: `v0.2.0` (current shared course release)
 
 ## Current Position
 
@@ -31,11 +31,11 @@ None. Your personal learning evidence begins when you start Phase 0 instruction 
 
 ## Pre-Learning Repository Step
 
-Publish the prepared scaffold as the public `ai-from-scratch-to-oci` repository, verify the uploaded `main` contents, update the repository-creation checklist item/history, and tag that verified commit as `v0.1.0`. This is repository administration, not Git competency evidence.
+Fork or clone the shared course repository at the current release (`v0.2.0`), then create or switch to your `progress/<learner>` branch before recording personal learning work. If you are maintaining the original repository, keep `v0.1.0` unchanged as the historical first public baseline. Repository setup is administration, not Git competency evidence.
 
 ## Next Learning Step
 
-After the public baseline is tagged and your `progress/<learner>` branch exists, begin Phase 0.1 with `Install Python 3`, then continue through interpreter/version verification in roadmap order. Create environments and practice Git commands when the roadmap reaches those items.
+After your `progress/<learner>` branch is based on the current shared course release, begin Phase 0.1 with `Install Python 3`, then continue through interpreter/version verification in roadmap order. Create environments and practice Git commands when the roadmap reaches those items.
 
 ## Blockers
 
