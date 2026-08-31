@@ -39,7 +39,7 @@ Use the latest shared course release unless you intentionally need an older hist
 Current recommended release:
 
 ```text
-v0.2.0
+v0.2.1
 ```
 
 Historical first public baseline:
@@ -48,7 +48,7 @@ Historical first public baseline:
 v0.1.0
 ```
 
-Keep `v0.1.0` unchanged. It represents the original public starting state. New shared course fixes and improvements continue on `main` and receive later version tags such as `v0.2.0`.
+Keep `v0.1.0` unchanged. It represents the original public starting state. New shared course fixes and improvements continue on `main` and receive later version tags. `v0.2.0` is retained as the previous shared course release, and `v0.2.1` is the current release.
 
 If you are publishing a new repository from the starter files instead of forking/cloning the original repository, do not ask GitHub to generate another README, `.gitignore`, or license—the repository already contains them.
 

@@ -32,6 +32,16 @@ Use these sources in this order:
 
 Do not silently rewrite the roadmap. If you discover a missing prerequisite or topic, document the gap and make the smallest roadmap change that solves it.
 
+### What You Should Expect From Your Tutor
+
+Your tutor should challenge weak assumptions, correct mistakes, explain trade-offs, and verify changing information instead of simply agreeing with you. It should teach the underlying concept before hiding it behind a framework, keep code grounded in your live repository, and require evidence before marking roadmap work complete.
+
+You should normally get a chance to attempt meaningful exercises before seeing the full solution. If later work shows that an earlier concept is still unclear, revisit it rather than carrying the gap forward.
+
+For current OCI implementation details, expect the tutor to verify official Oracle documentation before teaching or generating implementation-specific guidance.
+
+The detailed behavior contract is in `docs/prompts/ai-tutor-master-prompt.md`; the README gives the shorter learner-facing summary.
+
 ## 4. Standard Lesson Sequence
 
 For each checklist item:

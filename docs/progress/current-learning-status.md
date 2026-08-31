@@ -3,7 +3,7 @@
 ## Your Context
 
 - Progress branch: `progress/<learner>` (replace `<learner>` when beginning personal progress)
-- Base course version: `v0.2.0` (current shared course release)
+- Base course version: `v0.2.1` (current shared course release)
 
 ## Current Position
 
@@ -31,7 +31,7 @@ None. Your personal learning evidence begins when you start Phase 0 instruction 
 
 ## Pre-Learning Repository Step
 
-Fork or clone the shared course repository at the current release (`v0.2.0`), then create or switch to your `progress/<learner>` branch before recording personal learning work. If you are maintaining the original repository, keep `v0.1.0` unchanged as the historical first public baseline. Repository setup is administration, not Git competency evidence.
+Fork or clone the shared course repository at the current release (`v0.2.1`), then create or switch to your `progress/<learner>` branch before recording personal learning work. If you are maintaining the original repository, keep `v0.1.0` unchanged as the historical first public baseline. Repository setup is administration, not Git competency evidence.
 
 ## Next Learning Step
 

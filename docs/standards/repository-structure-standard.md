@@ -235,7 +235,7 @@ v0.1.0
 The current shared course release is:
 
 ```text
-v0.2.0
+v0.2.1
 ```
 
 Do not move or recreate existing release tags. Each release tag should remain an immutable snapshot of the shared course at that version. Start new progress branches from the latest release unless you intentionally want to reproduce an older course state.

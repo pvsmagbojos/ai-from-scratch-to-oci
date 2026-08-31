@@ -61,3 +61,14 @@ It records course scaffolding, standards, prompt changes, repository-governance 
 - Clarified that existing release tags are immutable snapshots and should not be moved when later releases are created.
 - Corrected stale documentation that still described `v0.1.0` as the intended/current starting version after `v0.2.0` was introduced.
 - Recorded and resolved `REPO-ISSUE-0005` for the missed release-version documentation synchronization.
+
+## 2026-09-01 — v0.2.1 AI Tutor Behavior Guidance
+
+- Added a concise `How to Use This Course With an AI Tutor` section describing the teaching, reasoning, verification, exercise, grounding, documentation, and response-quality behavior you should expect from the tutor.
+- Expanded `docs/prompts/ai-tutor-master-prompt.md` so the repository carries the same core tutoring behavior even when project-level AI settings are unavailable.
+- Added explicit guidance to separate facts, assumptions, inferences, recommendations, and documentation-backed claims; correct technical mistakes directly; explain trade-offs; and avoid hiding prerequisites behind frameworks.
+- Clarified that fast-tracking means reducing repetition and busywork rather than skipping prerequisites or important concepts.
+- Refined exercise rules so meaningful learning objectives receive active practice without forcing artificial exercises onto administrative/reference-only items.
+- Strengthened OCI guidance to prefer current official Oracle documentation for implementation-specific behavior.
+- Added a concise tutor-expectations subsection to the learning-session standard so the README, session workflow, and master prompt remain aligned.
+- Published these tutor-behavior/documentation refinements as shared course release `v0.2.1`; kept `v0.2.0` and `v0.1.0` unchanged as historical release snapshots.

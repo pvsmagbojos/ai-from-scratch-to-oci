@@ -10,7 +10,8 @@ The repository is set up so you can start from the same shared course material a
 
 - `main` — the reusable course starting point and shared course-maintenance history. Keep personal learning work off this branch.
 - `v0.1.0` — the immutable tag for the original published starting point.
-- `v0.2.0` — the current shared course release and recommended starting point for new progress branches.
+- `v0.2.1` — the current shared course release and recommended starting point for new progress branches.
+- `v0.2.0` — the previous shared course release, retained as an immutable historical snapshot.
 - `progress/<learner>` — your long-lived learning branch. Keep your roadmap state, exercises, notebooks, projects, learning log, and issue history here.
 - `course/<short-description>` — a temporary branch from `main` for fixes or improvements that should become part of the shared course.
 - `feature/<short-description>` / `experiment/<short-description>` — optional temporary branches from your progress branch when you want isolated implementation or experimentation work.
@@ -91,11 +92,33 @@ Use `docs/prompts/new-learning-session-prompt.md` as your session bootstrap prom
 
 When the live branch is readable, the tutor should get your active roadmap item from `docs/progress/current-learning-status.md` instead of asking you to paste it manually.
 
-### 4. Follow the Roadmap in Order
+### 4. Know What to Expect From the Tutor
+
+Your AI tutor should do more than answer questions. It should help you build understanding progressively and challenge weak assumptions instead of simply agreeing with you.
+
+Expect the tutor to:
+
+- start with intuition, then add technical detail, mathematics, and implementation when they are useful;
+- verify changing or vendor-specific information instead of relying on stale knowledge, and prefer current official Oracle documentation for OCI implementation details;
+- clearly separate facts, assumptions, inferences, recommendations, and documentation-backed claims;
+- correct technical mistakes directly and explain why they are wrong;
+- explain important trade-offs when several approaches are valid instead of presenting one preference as the only answer;
+- avoid introducing frameworks or abstractions before you understand the underlying concept when the abstraction would hide something important;
+- ground code in the live repository and ask for all genuinely missing implementation context at once rather than inventing files, APIs, types, or architecture;
+- give you meaningful exercises that require you to think, implement, explain, debug, compare, or make a technical decision;
+- let you attempt exercises before giving the full solution unless you ask for it or need it to continue;
+- require evidence of understanding or implementation before marking a roadmap item complete;
+- document material learning steps, decisions, errors, meaningful failed attempts, fixes or workarounds, verification, and lessons learned;
+- distinguish a proven root cause from a workaround that merely makes the problem disappear; and
+- keep explanations clear, concise, direct, and natural rather than overly formal or filled with unnecessary jargon.
+
+The full tutor behavior rules live in `docs/prompts/ai-tutor-master-prompt.md`. If your AI platform supports project-level or persistent instructions, you can also use those rules there, but the repository copy keeps the course portable across tools and accounts.
+
+### 5. Follow the Roadmap in Order
 
 Work through the current roadmap item, complete its exercise or knowledge check, and review the evidence before marking it complete. If a prerequisite is genuinely missing, learn that prerequisite first and document why it was needed. Do not silently skip or reorder roadmap work.
 
-### 5. Keep Your Learning Branch as the Progress Source of Truth
+### 6. Keep Your Learning Branch as the Progress Source of Truth
 
 Do not depend on a previous conversation to remember where you stopped. Keep decisions, progress, references, exercises, troubleshooting, and completion evidence in your specified repository branch.
 
@@ -108,7 +131,7 @@ For your personal learning state, use this order:
 
 If a new conversation disagrees with the repository, inspect your learning branch first. Update the relevant source-of-truth document only when you intentionally make a new decision or verify a correction.
 
-### 6. Document the Process, Including Problems
+### 7. Document the Process, Including Problems
 
 Keep a useful record of every material learning step: commands you ran, files you changed, decisions you made, exercises you attempted, important results, verification, and progress changes.
 
@@ -116,7 +139,7 @@ Errors and unsuccessful attempts are part of the learning process, so keep them 
 
 If the issue affects the shared course itself rather than only your personal work, record the shared fix under `docs/history/` on `main` instead of mixing it into your personal issue history.
 
-### 7. Close the Session Properly
+### 8. Close the Session Properly
 
 Before you end a learning session, update the files affected by the work on your learning branch:
 
